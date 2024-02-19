@@ -56,6 +56,5 @@ function findValueByKey(obj, companyName) {
     return null;
 }
 
-// Приклад використання функції для пошуку інформації про підкомпанію
 const subCompanyInfo = findValueByKey(company, 'Клієнт 1.2');
 console.log(subCompanyInfo);
