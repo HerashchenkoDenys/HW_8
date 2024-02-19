@@ -41,10 +41,12 @@ const company = {
     ]
 };
 
-function findValueByKey(obj, companyName) {
+    function findValueByKey(obj, companyName) {
     if (obj.name === companyName) {
         return obj;
-    } else if (obj.clients) {
+    }
+
+    else if (obj.clients) {
         let result = null;
         obj.clients.forEach(client => {
             if (!result) {
@@ -53,8 +55,8 @@ function findValueByKey(obj, companyName) {
         });
         return result;
     }
-    return null;
+     return obj;
 }
 
-const subCompanyInfo = findValueByKey(company, 'Клієнт 1.2');
+const subCompanyInfo = findValueByKey(company, 'Велика Компанія');
 console.log(subCompanyInfo);
